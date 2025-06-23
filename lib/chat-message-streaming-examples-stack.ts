@@ -165,7 +165,7 @@ export class ChatMessageStreamingExamplesStack extends cdk.Stack {
       this,
       'inboundMessageFunction',
       {
-        runtime: lambda.Runtime.NODEJS_14_X,
+        runtime: lambda.Runtime.NODEJS_16_X,
         handler: 'index.handler',
         code: lambda.Code.fromAsset(
           path.resolve(__dirname, '../src/lambda/inboundMessageHandler')
@@ -271,7 +271,7 @@ export class ChatMessageStreamingExamplesStack extends cdk.Stack {
       this,
       'outboundMessageFunction',
       {
-        runtime: lambda.Runtime.NODEJS_14_X,
+        runtime: lambda.Runtime.NODEJS_16_X,
         handler: 'index.handler',
         code: lambda.Code.fromAsset(
           path.resolve(__dirname, '../src/lambda/outboundMessageHandler')
@@ -340,7 +340,7 @@ export class ChatMessageStreamingExamplesStack extends cdk.Stack {
         this,
         'healthCheckFunction',
         {
-          runtime: lambda.Runtime.NODEJS_14_X,
+          runtime: lambda.Runtime.NODEJS_16_X,
           handler: 'index.handler',
           code: lambda.Code.fromAsset(
             path.resolve(__dirname, '../src/lambda/digitalChannelHealthCheck')
