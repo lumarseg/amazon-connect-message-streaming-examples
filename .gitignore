@@ -1,16 +1,23 @@
-# *.js
+# Compiled TypeScript files
+*.js
 !jest.config.js
 *.d.ts
+
+# Dependencies
 node_modules
+
+# IDE and editor files
 /.idea/
 
-# CDK asset staging directory
+# CDK generated files
 .cdk.staging
 cdk.out
 
-.DS_Store
+# AWS SAM files
 packaged.yml
 
+# Operating system files
+.DS_Store
 
-# Claude Code
+# Claude Code configuration
 CLAUDE.md

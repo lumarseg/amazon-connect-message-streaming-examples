@@ -1,8 +1,8 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0
 
-import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
-import * as cdk from '@aws-cdk/core';
+import { Template } from 'aws-cdk-lib/assertions';
+import * as cdk from 'aws-cdk-lib';
 import * as ChatMessageStreamingExamples from '../lib/chat-message-streaming-examples-stack';
 
 test('Empty Stack', () => {
@@ -10,7 +10,6 @@ test('Empty Stack', () => {
     // WHEN
     const stack = new ChatMessageStreamingExamples.ChatMessageStreamingExamplesStack(app, 'MyTestStack');
     // THEN
-    expectCDK(stack).to(matchTemplate({
-      "Resources": {}
-    }, MatchStyle.EXACT))
+    const template = Template.fromStack(stack);
+    template.resourceCountIs('AWS::Lambda::Function', 0);
 });

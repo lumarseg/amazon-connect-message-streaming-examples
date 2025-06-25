@@ -1,18 +1,18 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0
-import * as cdk from '@aws-cdk/core';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as dynamodb from '@aws-cdk/aws-dynamodb';
-import * as sns from '@aws-cdk/aws-sns';
-import * as subscriptions from '@aws-cdk/aws-sns-subscriptions';
-import * as iam from '@aws-cdk/aws-iam';
+import * as cdk from 'aws-cdk-lib';
+import { aws_lambda as lambda } from 'aws-cdk-lib';
+import { aws_dynamodb as dynamodb } from 'aws-cdk-lib';
+import { aws_sns as sns } from 'aws-cdk-lib';
+import { aws_sns_subscriptions as subscriptions } from 'aws-cdk-lib';
+import { aws_iam as iam } from 'aws-cdk-lib';
 import * as path from 'path';
-import * as apigw2 from '@aws-cdk/aws-apigatewayv2';
-import * as apigw2i from '@aws-cdk/aws-apigatewayv2-integrations';
-import { Duration } from '@aws-cdk/core';
+import { aws_apigatewayv2 as apigw2 } from 'aws-cdk-lib';
+import { aws_apigatewayv2_integrations as apigw2i } from 'aws-cdk-lib';
+import { Duration } from 'aws-cdk-lib';
 
 export class ChatMessageStreamingExamplesStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     // The code that defines your stack goes here
